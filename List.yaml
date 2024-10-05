@@ -8,7 +8,7 @@ proxies:
   - {name: 🇯🇵 JP JSCM, server: 221.181.185.182, port: 20020, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: 🇯🇵 JP ZJCM IPV6, server: 2409:8c28:2481:6:0:1:0:96, port: 10111, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: 🇯🇵 JP ZJCT, server: go.yyds.rest, port: 31856, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
-  - {name: 🇭🇰 HK's DNS Netflix SG, server: 221.181.185.182, port: 12345, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
+  - {name: 🇭🇰 HKDNS解锁在新加坡, server: 221.181.185.182, port: 12345, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: 🇭🇰 HK JSCM, server: 221.181.185.182, port: 12345, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: 🇭🇰 HK ZJCM IPV6, server: 2409:8c28:2481:6:0:1:0:96, port: 12345, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: 🇭🇰 HK ZJCT, server: go.yyds.rest, port: 49200, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
