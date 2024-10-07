@@ -38,45 +38,36 @@ SG JSCM = ss, 221.181.185.182, 30030, encrypt-method=aes-128-gcm, password=IAKIO
 SG ZJCM IPV6 = ss, 2409:8c28:2481:6:0:1:0:96, 34444, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false
 SG ZJCT = ss, go.yyds.rest, 45240, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false
 SG SZCM = ss,dd.yyds.rest, 57050, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
-OCSG HY2 = hysteria2, 158.178.228.215, 40403, password=5682f92e, skip-cert-verify=true, sni=www.bing.com
 
-KR JSCM = ss, 221.181.185.182, 40619, encrypt-method=aes-256-cfb, password=qwerREWQ@@, tfo=false, udp-relay=true
-KR ZJCM IPV6 = ss, 2409:8c28:2481:6:0:1:0:96, 22817, encrypt-method=aes-256-cfb, password=qwerREWQ@@, tfo=false, udp-relay=true
+
+OCSG HY2 = hysteria2, 158.178.228.215, 40403, password=5682f92e, skip-cert-verify=true, sni=www.bing.com
+OCSG Download = ss, zl-sg.bijia.me, 46937, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
 
 US LAX ZJCT = ss, go.yyds.rest, 35241, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
-
-US SJC ZJCT =  ss, go.yyds.rest, 31241, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
-US SJC JSCM =  ss, 221.181.185.182, 31241, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
-
-MX JSCM = ss, 221.181.185.182, 12350, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
 
 Test = ss, 2409:8c28:2481:6:0:1:0:96, 12350, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
 
 
 [Proxy Group]
-🚀 Manual Selection = select, JP JSCM, JP ZJCM IPV6, JP ZJCT, KR JSCM, KR ZJCM IPV6, HK JSCM, HK ZJCM IPV6, HK ZJCT, HK SZCM, SG JSCM, SG ZJCM IPV6, SG ZJCT, SG SZCM, OCSG HY2, US SJC JSCM ,US SJC ZJCT,  MX JSCM, Test
+🚀 Manual Selection = select, JP JSCM, JP ZJCM IPV6, JP ZJCT, HK JSCM, HK ZJCM IPV6, HK ZJCT, HK SZCM, SG JSCM, SG ZJCM IPV6, SG ZJCT, SG SZCM, OCSG HY2, OCSG Download, Test
 
 🇭🇰 HK = select, HK JSCM, HK ZJCM IPV6, HK ZJCT, HK SZCM
 
-🇭🇰 HK 2nd = url-test, HK JSCM, HK ZJCM IPV6, HK ZJCT, HK SZCM
+🇭🇰 HK 2nd = select, HK JSCM, HK ZJCM IPV6, HK ZJCT, HK SZCM
 
-🇸🇬 SG = select, SG JSCM, SG ZJCM IPV6, SG ZJCT, SG SZCM, OCSG HY2
+🇸🇬 SG = select, SG JSCM, SG ZJCM IPV6, SG ZJCT, SG SZCM, OCSG HY, OCSG Download
 
-🇸🇬 SG 2nd = url-test, SG JSCM, SG ZJCM IPV6, SG ZJCT, SG SZCM, OCSG HY2
-
-🇰🇷 KR = select, KR JSCM, KR ZJCM IPV6, Test
+🇰🇷 KR = select, Test
 
 🇹🇼 TW = select, Test
 
-🇯🇵 JP = select, JP JSCM, JP ZJCM IPV6, JP ZJCT
+🇯🇵 JP = select, JP JSCM, JP JSCM IPV6, JP ZJCT
 
-🇺🇲 US = select, Test,US SJC JSCM , US LAX ZJCT, US SJC ZJCT
+🇺🇲 US = select, Test, US LAX ZJCT
 
 🇪🇺 EU = select, Test
 
-🌍 OT = select, MX JSCM
-
-⏬ Download = select, Test
+⏬ Download = select, OCSG Download
 
 📲 TG = select,🇭🇰 HK, 🇭🇰 HK 2nd, 🇸🇬 SG,🇯🇵 JP,🇺🇲 US,🇪🇺 EU,🚀 Manual Selection,DIRECT
 💬 ChatGPT = select,🇭🇰 HK, 🇭🇰 HK 2nd, 🇸🇬 SG,🇯🇵 JP,🇺🇲 US,🇪🇺 EU,🚀 Manual Selection,DIRECT
