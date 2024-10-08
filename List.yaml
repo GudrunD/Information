@@ -24,50 +24,53 @@ http-request https?:\/\/.*\.iqiyi\.com\/.*authcookie= script-path=https://raw.gi
 [Proxy]
 DIRECT = direct
 
-JP JSCM = ss, 221.181.185.182, 20020, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
 JP ZJCM IPV6 = ss, 2409:8c28:2481:6:0:1:0:96, 10111, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
 JP ZJCT = ss, go.yyds.rest, 31856, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
 
-HK's DNS Netflix SG = ss, 221.181.185.182, 12345, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
-HK JSCM = ss, 221.181.185.182, 12345, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
+HK CSCM = ss, 36.158.205.20, 25427, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
 HK ZJCM IPV6 = ss, 2409:8c28:2481:6:0:1:0:96, 12345, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
 HK ZJCT = ss, go.yyds.rest, 49200, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
 HK SZCM = ss, sz.yyds.rest, 40031, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
 
-SG JSCM = ss, 221.181.185.182, 30030, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
 SG ZJCM IPV6 = ss, 2409:8c28:2481:6:0:1:0:96, 34444, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false
 SG ZJCT = ss, go.yyds.rest, 45240, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false
 SG SZCM = ss,dd.yyds.rest, 57050, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
-
-
 OCSG HY2 = hysteria2, 158.178.228.215, 40403, password=5682f92e, skip-cert-verify=true, sni=www.bing.com
-OCSG Download = ss, zl-sg.bijia.me, 46937, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
 
-US LAX ZJCT = ss, go.yyds.rest, 35241, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
+KR JSCM = ss, 221.181.185.182, 40619, encrypt-method=aes-256-cfb, password=qwerREWQ@@, tfo=false, udp-relay=true
+KR ZJCM IPV6 = ss, 2409:8c28:2481:6:0:1:0:96, 22817, encrypt-method=aes-256-cfb, password=qwerREWQ@@, tfo=false, udp-relay=true
+
+LAX SN ZJCT = ss, go.yyds.rest, 35531, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
+
+SJC GC ZJCT =  ss, go.yyds.rest, 31241, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
 
 Test = ss, 2409:8c28:2481:6:0:1:0:96, 12350, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
 
 
 [Proxy Group]
-🚀 Manual Selection = select, JP JSCM, JP ZJCM IPV6, JP ZJCT, HK JSCM, HK ZJCM IPV6, HK ZJCT, HK SZCM, SG JSCM, SG ZJCM IPV6, SG ZJCT, SG SZCM, OCSG HY2, OCSG Download, Test
+🚀 Manual Selection = select, JP ZJCM IPV6, JP ZJCT, HK CSCM, HK ZJCM IPV6, HK ZJCT, HK SZCM, SG ZJCM IPV6, SG ZJCT, SG SZCM, LAX SN ZJCT, SJC GC ZJCT, OCSG HY2, Test
 
-🇭🇰 HK = select, HK JSCM, HK ZJCM IPV6, HK ZJCT, HK SZCM
+🇭🇰 HK = select, HK CSCM, HK ZJCM IPV6, HK ZJCT, HK SZCM
 
-🇭🇰 HK 2nd = select, HK JSCM, HK ZJCM IPV6, HK ZJCT, HK SZCM
+🇭🇰 HK 2nd = url-test, HK CSCM, HK ZJCM IPV6, HK ZJCT, HK SZCM
 
-🇸🇬 SG = select, SG JSCM, SG ZJCM IPV6, SG ZJCT, SG SZCM, OCSG HY, OCSG Download
+🇸🇬 SG = select, SG ZJCM IPV6, SG ZJCT, SG SZCM, OCSG HY2
 
-🇰🇷 KR = select, Test
+🇸🇬 SG 2nd = url-test, SG ZJCM IPV6, SG ZJCT, SG SZCM, OCSG HY2
+
+🇰🇷 KR = select, KR JSCM, KR ZJCM IPV6, Test
 
 🇹🇼 TW = select, Test
 
-🇯🇵 JP = select, JP JSCM, JP JSCM IPV6, JP ZJCT
+🇯🇵 JP = select, JP ZJCM IPV6, JP ZJCT
 
-🇺🇲 US = select, Test, US LAX ZJCT
+🇺🇲 US = select, LAX SN ZJCT, SJC GC ZJCT
 
 🇪🇺 EU = select, Test
 
-⏬ Download = select, OCSG Download
+🌍 OT = select, Test
+
+⏬ Download = select, Test
 
 📲 TG = select,🇭🇰 HK, 🇭🇰 HK 2nd, 🇸🇬 SG,🇯🇵 JP,🇺🇲 US,🇪🇺 EU,🚀 Manual Selection,DIRECT
 💬 ChatGPT = select,🇭🇰 HK, 🇭🇰 HK 2nd, 🇸🇬 SG,🇯🇵 JP,🇺🇲 US,🇪🇺 EU,🚀 Manual Selection,DIRECT
@@ -105,7 +108,7 @@ RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/r
 RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list,🎯 Direct,update-interval=86400 // 私有网
 DOMAIN,license.sublimehq.com,REJECT
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMax/ChinaMax_All.list,DIRECT
+DOMAIN,hhse.hyp.rip,DIRECT
 FINAL,🐟 TheRest
-
 
 
