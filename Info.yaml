@@ -5,6 +5,7 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
+  - {name: 🇯🇵 JP SH, server: sh.mkxk.dj, port: 21411, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: 🇯🇵 JP ZJCM IPV6, server: 2409:8c28:2481:6:0:1:0:96, port: 10111, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: 🇯🇵 JP ZJCT, server: go.yyds.rest, port: 31856, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: 🇭🇰 HK CSCM, server: 36.158.205.20, port: 25427, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
@@ -25,6 +26,7 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
+      - 🇯🇵 JP SH
       - 🇯🇵 JP ZJCM IPV6
       - 🇯🇵 JP ZJCT
       - 🇭🇰 HK CSCM
@@ -45,6 +47,7 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 🇯🇵 JP SH
       - 🇯🇵 JP ZJCM IPV6
       - 🇯🇵 JP ZJCT
       - 🇭🇰 HK CSCM
@@ -65,6 +68,7 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 🇯🇵 JP SH
       - 🇯🇵 JP ZJCM IPV6
       - 🇯🇵 JP ZJCT
       - 🇭🇰 HK CSCM
@@ -84,6 +88,7 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇯🇵 JP SH
       - 🇯🇵 JP ZJCM IPV6
       - 🇯🇵 JP ZJCT
       - 🇭🇰 HK CSCM
@@ -103,6 +108,7 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
+      - 🇯🇵 JP SH
       - 🇯🇵 JP ZJCM IPV6
       - 🇯🇵 JP ZJCT
       - 🇭🇰 HK CSCM
@@ -122,6 +128,7 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
+      - 🇯🇵 JP SH
       - 🇯🇵 JP ZJCM IPV6
       - 🇯🇵 JP ZJCT
       - 🇭🇰 HK CSCM
@@ -142,6 +149,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🇯🇵 JP SH
       - 🇯🇵 JP ZJCM IPV6
       - 🇯🇵 JP ZJCT
       - 🇭🇰 HK CSCM
@@ -178,6 +186,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 🇯🇵 JP SH
       - 🇯🇵 JP ZJCM IPV6
       - 🇯🇵 JP ZJCT
       - 🇭🇰 HK CSCM
