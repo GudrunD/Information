@@ -3469,6 +3469,7 @@ rules:
   - IP-CIDR,116.71.136.0/22,🎯 全球直连,no-resolve
   - IP-CIDR,116.71.141.0/24,🎯 全球直连,no-resolve
   - IP-CIDR,116.71.142.0/24,🎯 全球直连,no-resolve
-  - IP-CIDR,116.71.243.0/24,🎯 全球直连,no-resol
+  - IP-CIDR,116.71.243.0/24,🎯 全球直连,no-resolve
+  - IP-CIDR,172.3.0.0/12,🎯 全球直连,no-resolve
   - GEOIP,CN,🎯 全球直连
   - MATCH,🐟 漏网之鱼
