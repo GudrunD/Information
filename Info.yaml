@@ -8,7 +8,7 @@ proxies:
   - {name: 🇯🇵 JP SH, server: sh.mkxk.dj, port: 21411, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: 🇯🇵 JP ZJCM IPV6, server: 2409:8c28:2481:6:0:1:0:96, port: 10111, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: 🇯🇵 JP ZJCT, server: go.yyds.rest, port: 31856, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
-  - {name: 🇭🇰 HK CSCM, server: 36.158.205.20, port: 25427, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
+  - {name: 🇭🇰 HK IEPL, server: ee.ednovas.cloud, port: 19916, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: 🇭🇰 HK ZJCM IPV6, server: 2409:8c28:2481:6:0:1:0:96, port: 12345, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: 🇭🇰 HK ZJCT, server: go.yyds.rest, port: 49200, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: 🇭🇰 HK SZCM, server: sz.yyds.rest, port: 40031, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
@@ -29,7 +29,7 @@ proxy-groups:
       - 🇯🇵 JP SH
       - 🇯🇵 JP ZJCM IPV6
       - 🇯🇵 JP ZJCT
-      - 🇭🇰 HK CSCM
+      - 🇭🇰 HK IEPL
       - 🇭🇰 HK ZJCM IPV6
       - 🇭🇰 HK ZJCT
       - 🇭🇰 HK SZCM
@@ -50,7 +50,7 @@ proxy-groups:
       - 🇯🇵 JP SH
       - 🇯🇵 JP ZJCM IPV6
       - 🇯🇵 JP ZJCT
-      - 🇭🇰 HK CSCM
+      - 🇭🇰 HK IEPL
       - 🇭🇰 HK ZJCM IPV6
       - 🇭🇰 HK ZJCT
       - 🇭🇰 HK SZCM
@@ -71,7 +71,7 @@ proxy-groups:
       - 🇯🇵 JP SH
       - 🇯🇵 JP ZJCM IPV6
       - 🇯🇵 JP ZJCT
-      - 🇭🇰 HK CSCM
+      - 🇭🇰 HK IEPL
       - 🇭🇰 HK ZJCM IPV6
       - 🇭🇰 HK ZJCT
       - 🇭🇰 HK SZCM
@@ -91,7 +91,7 @@ proxy-groups:
       - 🇯🇵 JP SH
       - 🇯🇵 JP ZJCM IPV6
       - 🇯🇵 JP ZJCT
-      - 🇭🇰 HK CSCM
+      - 🇭🇰 HK IEPL
       - 🇭🇰 HK ZJCM IPV6
       - 🇭🇰 HK ZJCT
       - 🇭🇰 HK SZCM
@@ -111,7 +111,7 @@ proxy-groups:
       - 🇯🇵 JP SH
       - 🇯🇵 JP ZJCM IPV6
       - 🇯🇵 JP ZJCT
-      - 🇭🇰 HK CSCM
+      - 🇭🇰 HK IEPL
       - 🇭🇰 HK ZJCM IPV6
       - 🇭🇰 HK ZJCT
       - 🇭🇰 HK SZCM
@@ -131,7 +131,7 @@ proxy-groups:
       - 🇯🇵 JP SH
       - 🇯🇵 JP ZJCM IPV6
       - 🇯🇵 JP ZJCT
-      - 🇭🇰 HK CSCM
+      - 🇭🇰 HK IEPL
       - 🇭🇰 HK ZJCM IPV6
       - 🇭🇰 HK ZJCT
       - 🇭🇰 HK SZCM
@@ -152,7 +152,7 @@ proxy-groups:
       - 🇯🇵 JP SH
       - 🇯🇵 JP ZJCM IPV6
       - 🇯🇵 JP ZJCT
-      - 🇭🇰 HK CSCM
+      - 🇭🇰 HK IEPL
       - 🇭🇰 HK ZJCM IPV6
       - 🇭🇰 HK ZJCT
       - 🇭🇰 HK SZCM
@@ -189,7 +189,7 @@ proxy-groups:
       - 🇯🇵 JP SH
       - 🇯🇵 JP ZJCM IPV6
       - 🇯🇵 JP ZJCT
-      - 🇭🇰 HK CSCM
+      - 🇭🇰 HK IEPL
       - 🇭🇰 HK ZJCM IPV6
       - 🇭🇰 HK ZJCT
       - 🇭🇰 HK SZCM
