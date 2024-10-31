@@ -7,15 +7,15 @@ external-controller: :9090
 proxies:
   - {name: 🇯🇵 JP SH, server: sh.mkxk.dj, port: 21411, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
   - {name: 🇯🇵 JP ZJCM IPV6, server: 2409:8c28:2481:6:0:1:0:96, port: 10111, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
-  - {name: 🇯🇵 JP ZJCT, server: go.yyds.rest, port: 31856, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: 🇯🇵 JP ZJCT, server: go.yyds.rest, port: 18730, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
   - {name: 🇭🇰 HK IEPL, server: ee.ednovas.cloud, port: 19916, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: 🇭🇰 HK ZJCM IPV6, server: 2409:8c28:2481:6:0:1:0:96, port: 12345, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
-  - {name: 🇭🇰 HK ZJCT, server: go.yyds.rest, port: 49200, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
-  - {name: 🇭🇰 HK SZCM, server: sz.yyds.rest, port: 40031, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
+  - {name: 🇭🇰 HK ZJCT, server: go.yyds.rest, port: 49220, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
+  - {name: 🇭🇰 HK SZCM, server: sz.yyds.rest, port: 57313, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: 🇸🇬 SG ZJCM IPV6, server: 2409:8c28:2481:6:0:1:0:96, port: 34444, type: ss, cipher: aes-128-gcm, password: IAKIOI}
   - {name: 🇸🇬 SG ZJCT, server: go.yyds.rest, port: 45240, type: ss, cipher: aes-128-gcm, password: IAKIOI}
   - {name: 🇸🇬 SG SZCM, server: dd.yyds.rest, port: 57050, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
-  - {name: SJC GC ZJCT, server: go.yyds.rest, port: 31242, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
+  - {name: SJC GC ZJCT, server: go.yyds.rest, port: 35242, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: Test, server: 2409:8c28:2481:6:0:1:0:96, port: 12350, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
