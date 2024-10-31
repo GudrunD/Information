@@ -13,7 +13,7 @@ proxies:
   - {name: 🇭🇰 HK ZJCT, server: go.yyds.rest, port: 49220, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: 🇭🇰 HK SZCM, server: sz.yyds.rest, port: 57313, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: 🇸🇬 SG ZJCM IPV6, server: 2409:8c28:2481:6:0:1:0:96, port: 34444, type: ss, cipher: aes-128-gcm, password: IAKIOI}
-  - {name: 🇸🇬 SG ZJCT, server: go.yyds.rest, port: 45240, type: ss, cipher: aes-128-gcm, password: IAKIOI}
+  - {name: 🇸🇬 SG ZJCT, server: go.yyds.rest, port: 35483, type: ss, cipher: aes-128-gcm, password: IAKIOI}
   - {name: 🇸🇬 SG SZCM, server: dd.yyds.rest, port: 57050, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: SJC GC ZJCT, server: go.yyds.rest, port: 35242, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: Test, server: 2409:8c28:2481:6:0:1:0:96, port: 12350, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
