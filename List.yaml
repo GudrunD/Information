@@ -1,116 +1,77 @@
-#!MANAGED-CONFIG https://api.v1.mk/sub?config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online_Full_NoAuto.ini&emoji=true&expand=true&fdn=false&insert=false&list=false&scv=false&target=surge&tfo=false&udp=false&url=https%3A%2F%2Fsub.id9.cc%2Fsub%3Ftarget%3Dclash%26new_name%3Dtrue%26url%3Dss%253A%252F%252FYWVzLTEyOC1nY206SUFLSU9J%254042.3.68.15%253A50035%2523233boy-ss-42.3.68.15%26insert%3Dfalse%26config%3Dhttps%253A%252F%252Fraw.githubusercontent.com%252FACL4SSR%252FACL4SSR%252Fmaster%252FClash%252Fconfig%252FACL4SSR_Online.ini&ver=4&xudp=false interval=86400 strict=false
-
 [General]
-loglevel = notify
-bypass-system = true
-skip-proxy = 127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,localhost,*.local,e.crashlytics.com,captive.apple.com,::ffff:0:0:0:0/1,::ffff:128:0:0:0/1
-#DNS设置或根据自己网络情况进行相应设置
-bypass-tun = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12
-dns-server = 119.29.29.29,223.5.5.5,218.30.19.40,61.134.1.4
+dns-server = 8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844
+ipv6 = true
+tun-ipv6 = true
+skip-proxy = localhost, *.local, 0.0.0.0/8, 10.0.0.0/8, 17.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.168.0.0/16
+exclude-simple-hostnames = true
 external-controller-access = password@0.0.0.0:6170
 http-api = password@0.0.0.0:6171
-test-timeout = 5
 http-api-web-dashboard = true
-exclude-simple-hostnames = true
-allow-wifi-access = true
-http-listen = 0.0.0.0:7890
-socks5-listen = 0.0.0.0:7891
-wifi-access-http-port = 6152
-wifi-access-socks5-port = 6153
-
-[Script]
-http-request https?:\/\/.*\.iqiyi\.com\/.*authcookie= script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
+show-error-page-for-reject = true
+internet-test-url = http://223.6.6.6
+proxy-test-url = http://1.0.0.1/generate_204
+test-timeout = 5
+always-real-ip = *.test.com
+hijack-dns = *:53
+use-local-host-item-for-proxy = false
+geoip-maxmind-url = https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb
+disable-geoip-db-auto-update = false
+allow-dns-svcb = false
+udp-policy-not-supported-behaviour = REJECT
+http-listen = 0.0.0.0
+socks5-listen = 0.0.0.0
+debug-cpu-usage = false
+debug-memory-usage = false
+vif-mode = v3
 
 [Proxy]
-DIRECT = direct
-
-JP SH = ss, sh.mkxk.dj, 21411, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
-JP ZJCM IPV6 = ss, 2409:8c28:2481:6:0:1:0:96, 10111, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
-JP ZJCT = ss, go.yyds.rest, 31856, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
-
-HK CSCM = ss, 36.158.205.20, 25427, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
+SJC SH = ss, sh.mkxk.dj, 21409, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+JP ZJCT = ss, go.yyds.rest, 18730, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+JP ZJCM IPV6 = ss, 2409:8c28:2481:6:0:1:0:96, 10111, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+HK IEPL = ss, ee.ednovas.cloud, 19916, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
 HK ZJCM IPV6 = ss, 2409:8c28:2481:6:0:1:0:96, 12345, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
-HK ZJCT = ss, go.yyds.rest, 49200, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
-HK SZCM = ss, sz.yyds.rest, 40031, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
-
+HK ZJCT = ss, go.yyds.rest, 49220, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
+HK SZCM = ss, sz.yyds.rest, 57313, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
 SG ZJCM IPV6 = ss, 2409:8c28:2481:6:0:1:0:96, 34444, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false
-SG ZJCT = ss, go.yyds.rest, 45240, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false
-SG SZCM = ss,dd.yyds.rest, 57050, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
-OCSG HY2 = hysteria2, 158.178.228.215, 40403, password=5682f92e, skip-cert-verify=true, sni=www.bing.com
-
-KR JSCM = ss, 221.181.185.182, 40619, encrypt-method=aes-256-cfb, password=qwerREWQ@@, tfo=false, udp-relay=true
-KR ZJCM IPV6 = ss, 2409:8c28:2481:6:0:1:0:96, 22817, encrypt-method=aes-256-cfb, password=qwerREWQ@@, tfo=false, udp-relay=true
-
-LAX SN ZJCT = ss, go.yyds.rest, 35531, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
-
-SJC GC ZJCT =  ss, go.yyds.rest, 31241, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
-
-Test = ss, 2409:8c28:2481:6:0:1:0:96, 12350, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
-
+SG ZJCT = ss, go.yyds.rest, 35483, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false
+SG SZCM = ss, dd.yyds.rest, 45632, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
+SJC GC ZJCT = ss, go.yyds.rest, 31241, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
+Test = ss, go.yyds.rest, 31241, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
 
 [Proxy Group]
-🚀 Manual Selection = select, JP SH, JP ZJCM IPV6, JP ZJCT, HK CSCM, HK ZJCM IPV6, HK ZJCT, HK SZCM, SG ZJCM IPV6, SG ZJCT, SG SZCM, LAX SN ZJCT, SJC GC ZJCT, OCSG HY2, Test
+Manual Selection = select, SJCSH, JP ZJCT, JP ZJCM IPV6, HK IEPL, HK ZJCM IPV6, HK ZJCT, HK SZCM, SG ZJCM IPV6, SG ZJCT, SG SZCM, SJC GC ZJCT, Test
 
-🇭🇰 HK = select, HK CSCM, HK ZJCM IPV6, HK ZJCT, HK SZCM
+HK = select, HK IEPL, HK ZJCM IPV6, HK ZJCT, HK SZCM, Test
+SG = select, SG ZJCM IPV6, SG ZJCT, SG SZCM, Test
+JP = select, SJC SH, JP ZJCM IPV6, JP ZJCT, Test
+US = select, SJC SH, SJC GC ZJCT, Test
+EU = select, Test
+Other = select, Test
 
-🇭🇰 HK 2nd = url-test, HK CSCM, HK ZJCM IPV6, HK ZJCT, HK SZCM
-
-🇸🇬 SG = select, SG ZJCM IPV6, SG ZJCT, SG SZCM, OCSG HY2
-
-🇸🇬 SG 2nd = url-test, SG ZJCM IPV6, SG ZJCT, SG SZCM, OCSG HY2
-
-🇰🇷 KR = select, KR JSCM, KR ZJCM IPV6, Test
-
-🇹🇼 TW = select, Test
-
-🇯🇵 JP = select, JP SH, JP ZJCM IPV6, JP ZJCT
-
-🇺🇲 US = select, LAX SN ZJCT, SJC GC ZJCT
-
-🇪🇺 EU = select, Test
-
-🌍 OT = select, Test
-
-⏬ Download = select, Test
-
-📲 TG = select,🇭🇰 HK, 🇭🇰 HK 2nd, 🇸🇬 SG,🇯🇵 JP,🇺🇲 US,🇪🇺 EU,🚀 Manual Selection,DIRECT
-💬 ChatGPT = select,🇭🇰 HK, 🇭🇰 HK 2nd, 🇸🇬 SG,🇯🇵 JP,🇺🇲 US,🇪🇺 EU,🚀 Manual Selection,DIRECT
-📹 Youtube = select,🇭🇰 HK, 🇭🇰 HK 2nd, 🇸🇬 SG,🇯🇵 JP,🇺🇲 US,🇪🇺 EU,🚀 Manual Selection,DIRECT
-🎥 Netflix = select,🇭🇰 HK, 🇭🇰 HK 2nd, 🇸🇬 SG,🇯🇵 JP,🇺🇲 US,🇪🇺 EU,🚀 Manual Selection,DIRECT
-🌍 International Media = select,🇭🇰 HK, 🇭🇰 HK 2nd, 🇸🇬 SG,🇯🇵 JP,🇺🇲 US,🇪🇺 EU,🚀 Manual Selection,DIRECT
-🇨🇳 CN Media = select,🇭🇰 HK, 🇭🇰 HK 2nd, 🇸🇬 SG,🇯🇵 JP,🇺🇲 US,🇪🇺 EU,🚀 Manual Selection,DIRECT
-📢 Google = select,🇭🇰 HK, 🇭🇰 HK 2nd, 🇸🇬 SG,🇯🇵 JP,🇺🇲 US,🇪🇺 EU,🚀 Manual Selection,DIRECT
-Ⓜ️ Microsoft = select,🇭🇰 HK, 🇭🇰 HK 2nd, 🇸🇬 SG,🇯🇵 JP,🇺🇲 US,🇪🇺 EU,🚀 Manual Selection,DIRECT
-🍎 Apple = select,🇭🇰 HK, 🇭🇰 HK 2nd, 🇸🇬 SG,🇯🇵 JP,🇺🇲 US,🇪🇺 EU,🚀 Manual Selection,DIRECT
-🎯 Direct = select,🇭🇰 HK, 🇭🇰 HK 2nd, 🇸🇬 SG,🇯🇵 JP,🇺🇲 US,🇪🇺 EU,🚀 Manual Selection,DIRECT
-🛑 ADs = select,REJECT,DIRECT
-🍃 Apps = select,REJECT,DIRECT
-🐟 TheRest = select,🇭🇰 HK, 🇭🇰 HK 2nd, 🇸🇬 SG,🇯🇵 JP,🇺🇲 US,🇪🇺 EU,🚀 Manual Selection,DIRECT
+ChatGPT = select, HK, SG, JP, US, EU, Manual Selection, DIRECT
+Microsoft = select, HK, SG, JP, US, EU, Manual Selection, DIRECT
+International Media = select, HK, SG, JP, US, EU, Manual Selection, DIRECT
+CN Media = select, HK, SG, JP, US, EU, Manual Selection, DIRECT
+Google = select, HK, SG, JP, US, EU, Manual Selection, DIRECT
+TG = select, HK, SG, JP, US, EU, Manual Selection, DIRECT
+Apple = select, HK, SG, JP, US, EU, Manual Selection, DIRECT
+Apps = select, HK, SG, JP, US, EU, Manual Selection, DIRECT
+Ads = select, REJECT, DIRECT
 
 [Rule]
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list,🎯 Direct,update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list,🎯 Direct,update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/chenyk1219/surge/release/adg.list,🛑 ADs,update-interval=86400,no-resolve // AD广告
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list,🍃 Apps,update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list,📢 Google,update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Microsoft/Microsoft.list,Ⓜ️ Microsoft,update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OneDrive/OneDrive.list,Ⓜ️ Microsoft,update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list,🍎 Apple,update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list,📲 TG,update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/Coldvvater/Mononoke/master/Surge/Rules/AI.list,💬 ChatGPT,update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list,📹 Youtube,update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Netflix.list,🎥 Netflix,update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list,🇨🇳 CN Media,update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list,🌍 International Media,update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list,🚀 Manual Selection,update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/chenyk1219/surge/release/Unblocking.list,🎯 Direct,update-interval=86400 // 白名单
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Direct/Direct.list,🎯 Direct,update-interval=86400 // 规则修正
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Lan/Lan.list,🎯 Direct,update-interval=86400 // Lan网
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list,🎯 Direct,update-interval=86400 // 私有网
+DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/direct.txt, DIRECT
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list, DIRECT,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list, Ads,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list, Apps,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list, Microsoft,update-interval=86400
+DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/apple.txt, Apple,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list, TG,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Surge/OpenAI/OpenAI.list,ChatGPT
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list, International Media,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list, Manual Selection,update-interval=86400
+DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/gfw.txt, Manual Selection,update-interval=86400
 DOMAIN,license.sublimehq.com,REJECT
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMax/ChinaMax_All.list,DIRECT
-DOMAIN,hhse.hyp.rip,DIRECT
-FINAL,🐟 TheRest
-
-
-
+RULE-SET,https://ruleset.skk.moe/List/ip/domestic.conf,DIRECT
+IP-CIDR,185.213.24.59/32,DIRECT
+GEOIP,CN,DIRECT
+FINAL,Manual Selection,dns-failed
