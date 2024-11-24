@@ -25,13 +25,14 @@ debug-memory-usage = false
 vif-mode = v3
 
 [Proxy]
-SJC SH = ss, sh.mkxk.dj, 21409, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
-JP ZJCT = ss, nbdx.ny.mejd.cn, 39522, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+JP JSCM = ss, 36.150.215.184, 20024, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+JP ZJCT = ss, 221.131.165.57, 20024, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
 JP ZJCM IPV6 = ss, 2409:8c28:2481:6:0:1:0:96, 10111, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
 HK IEPL = ss, ee.ednovas.cloud, 19916, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
 HK ZJCM IPV6 = ss, 2409:8c28:2481:6:0:1:0:96, 12345, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
-HK ZJCT = ss, go.yyds.rest, 42717, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
-HK SZCM = ss, sz.yyds.rest, 51923, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+HK ZJCT = ss, 221.131.165.57, 30024, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+HK SZCM = ss, 36.150.215.184, 30024, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+HK SCCM = ss, 117.176.203.229, 30024, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
 SG ZJCM IPV6 = ss, 2409:8c28:2481:6:0:1:0:96, 34444, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false
 SG ZJCT = ss, go.yyds.rest, 50745, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false
 SG SZCM = ss, dd.yyds.rest, 45632, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
@@ -39,12 +40,12 @@ SJC GC ZJCT = ss, go.yyds.rest, 31241, encrypt-method=aes-128-gcm, password=IAKI
 Test = ss, 120.199.91.25, 64220, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
 
 [Proxy Group]
-Manual Selection = select, SJC SH, JP ZJCT, JP ZJCM IPV6, HK IEPL, HK ZJCM IPV6, HK ZJCT, HK SZCM, SG ZJCM IPV6, SG ZJCT, SG SZCM, SJC GC ZJCT, Test
+Manual Selection = select, JP JSCM , JP ZJCT, JP ZJCM IPV6, HK IEPL, HK ZJCM IPV6, HK ZJCT, HK SZCM, SG ZJCM IPV6, SG ZJCT, SG SZCM, SJC GC ZJCT, Test
 
 HK = select, HK IEPL, HK ZJCM IPV6, HK ZJCT, HK SZCM, Test
 SG = select, SG ZJCM IPV6, SG ZJCT, SG SZCM, Test
-JP = select, SJC SH, JP ZJCM IPV6, JP ZJCT, Test
-US = select, SJC SH, SJC GC ZJCT, Test
+JP = select, JP JSCM, JP ZJCM IPV6, JP ZJCT, Test
+US = select, SJC GC ZJCT, Test
 EU = select, Test
 Other = select, Test
 
