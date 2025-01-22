@@ -9,15 +9,15 @@ proxies:
   - {name: 🇯🇵 JP ZJCT, server: 221.131.165.57, port: 20024, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
   - {name: 🇯🇵 JP ZJCM IPV6, server: 2409:8c28:2481:6:0:1:0:96, port: 10111, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
   - {name: 🇭🇰 HK IEPL, server: ee.ednovas.cloud, port: 19916, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
-  - {name: 🇭🇰 HK ZJCM IPV6, server: 2409:8c28:2481:6:0:1:0:96, port: 12345, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
-  - {name: 🇭🇰 HK ZJCT, server: 221.131.165.57, port: 30024, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
-  - {name: 🇭🇰 HK SZCM, server: 36.150.215.184, port: 30024, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
-  - {name: 🇭🇰 HK SCCM, server: 117.176.203.229, port: 30024, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: 🇭🇰 HK ZJCM IPV6, server: sh.mkxk.dj, port: 21409, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: 🇭🇰 HK ZJCT, server: sh.mkxk.dj, port: 21409, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: 🇭🇰 HK SZCM, server: sh.mkxk.dj, port: 21409, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: 🇭🇰 HK SCCM, server: sh.mkxk.dj, port: 21409, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
   - {name: 🇸🇬 SG ZJCM IPV6, server: 2409:8c28:2481:6:0:1:0:96, port: 34444, type: ss, cipher: aes-128-gcm, password: IAKIOI}
   - {name: 🇸🇬 SG ZJCT, server: go.yyds.rest, port: 50745, type: ss, cipher: aes-128-gcm, password: IAKIOI}
   - {name: 🇸🇬 SG SZCM, server: dd.yyds.rest, port: 45632, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
   - {name: SJC GC ZJCT, server: go.yyds.rest, port: 31241, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
-  - {name: Test, server: 120.199.91.25, port: 64220, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: Test, server: sh.mkxk.dj, port: 21409, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
