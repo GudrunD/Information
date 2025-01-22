@@ -14,9 +14,9 @@ proxies:
   - {name: 🇭🇰 HK SZCM, server: sh.mkxk.dj, port: 21409, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
   - {name: 🇭🇰 HK SCCM, server: sh.mkxk.dj, port: 21409, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
   - {name: 🇸🇬 SG ZJCM IPV6, server: 2409:8c28:2481:6:0:1:0:96, port: 34444, type: ss, cipher: aes-128-gcm, password: IAKIOI}
-  - {name: 🇸🇬 SG ZJCT, server: go.yyds.rest, port: 50745, type: ss, cipher: aes-128-gcm, password: IAKIOI}
-  - {name: 🇸🇬 SG SZCM, server: dd.yyds.rest, port: 45632, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
-  - {name: SJC GC ZJCT, server: go.yyds.rest, port: 31241, type: ss, cipher: aes-128-gcm, password: IAKIOI, udp: true}
+  - {name: 🇸🇬 SG ZJCT, server: 58.254.184.149, port: 44391, type: ss, cipher: aes-128-gcm, password: Euler}
+  - {name: 🇸🇬 SG SZCM, server: 58.63.250.228, port: 44391, type: ss, cipher: aes-128-gcm, password: Euler}
+  - {name: SJC GC ZJCT, server: zxdx.yyds.rest, port: 44391, type: ss, cipher: aes-128-gcm, password: Euler}
   - {name: Test, server: sh.mkxk.dj, port: 21409, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
