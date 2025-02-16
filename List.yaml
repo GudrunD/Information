@@ -9,9 +9,9 @@ ipv6=true
 
 [Proxy]
 # US
-SJC/SPK SH = ss, sh.mkxk.dj, 21409, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
-SJC ZJCT = ss, nbdx.yyds.rest, 30394, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
-SPK ZJCT = ss, nbdx.yyds.rest, 13872, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+US SJC/SPK SH = ss, sh.mkxk.dj, 21409, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+US SJC ZJCT = ss, nbdx.yyds.rest, 30394, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+US SPK ZJCT = ss, nbdx.yyds.rest, 13872, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
 
 # JP
 JP ZJCT = ss, nbdx.yyds.rest, 56313, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
@@ -32,8 +32,15 @@ TW HKIPLC = ss, zxdx.yyds.rest, 49975, encrypt-method=aes-256-gcm, password=h0M9
 # Test Node
 Test = ss, zxdx.yyds.rest, 49975, encrypt-method=aes-256-gcm, password=h0M9wjzWfn, tfo=false, udp-relay=true
 
+備用 JP 上海 = ss, cqq210.198139.xyz, 10030, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+備用 JP 湖北 = ss, qqb12.198139.xyz, 10040, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+備用 HK 上海 = ss, cqq210.198139.xyz, 50769, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+備用 HK 廣西 = ss, qqa813.198139.xyz, 44314, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+備用 HK 廣州 = ss, zxdx.yyds.rest, 34038, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+備用 US 上海 = ss, cqq210.198139.xyz, 11919, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+
 [Proxy Group]
-Manual Selection = select, JP ZJCT, JP ZJCM, HK/SG IEPL, HK ZJCT, HK ZJCM, SG ZJCT, SG ZJCM, TW HKIPLC, SJC/SPK SH, SJC ZJCT, SPK ZJCT, Test
+Manual Selection = select, JP ZJCT, JP ZJCM, HK/SG IEPL, HK ZJCT, HK ZJCM, SG ZJCT, SG ZJCM, TW HKIPLC, SJC/SPK SH, SJC ZJCT, SPK ZJCT, Test, 備用 JP 上海, 備用 JP 湖北, 備用 HK 上海, 備用 HK 廣西, 備用 HK 廣州, 備用 US 上海
 
 HK = select, HK/SG IEPL, HK ZJCT, HK ZJCM, Test
 SG = select, SG ZJCT, SG ZJCM, Test
