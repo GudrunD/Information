@@ -1,51 +1,45 @@
 [General]
-dns-server = 8.8.8.8, 8.8.4.4, 2001:4860:4860::8888, 2001:4860:4860::8844
-ipv6 = true
-tun-ipv6 = true
-skip-proxy = localhost, *.local, 0.0.0.0/8, 10.0.0.0/8, 17.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.168.0.0/16
-exclude-simple-hostnames = true
-external-controller-access = password@0.0.0.0:6170
-http-api = password@0.0.0.0:6171
-http-api-web-dashboard = true
-show-error-page-for-reject = true
-internet-test-url = http://223.6.6.6
-proxy-test-url = http://1.0.0.1/generate_204
-test-timeout = 5
-always-real-ip = *.test.com
-hijack-dns = *:53
-use-local-host-item-for-proxy = false
-geoip-maxmind-url = https://github.com/Hackl0us/GeoIP2-CN/raw/release/Country.mmdb
-disable-geoip-db-auto-update = false
-allow-dns-svcb = false
-udp-policy-not-supported-behaviour = REJECT
-http-listen = 0.0.0.0
-socks5-listen = 0.0.0.0
-debug-cpu-usage = false
-debug-memory-usage = false
-vif-mode = v3
+loglevel = notify
+bypass-system = true
+skip-proxy = 127.0.0.1,192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,100.64.0.0/10,localhost,*.local,e.crashlytics.com,captive.apple.com,::ffff:0:0:0:0/1,::ffff:128:0:0:0/1
+#DNS设置或根据自己网络情况进行相应设置
+bypass-tun = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12
+dns-server = 119.29.29.29,223.5.5.5
+ipv6=true
 
 [Proxy]
-JP JSCM = ss, 36.150.215.184, 20024, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
-JP ZJCT = ss, 221.131.165.57, 20024, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
-JP ZJCM IPV6 = ss, 2409:8c28:2481:6:0:1:0:96, 10111, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
-HK IEPL = ss, ee.ednovas.cloud, 19916, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
-HK ZJCM IPV6 = ss, 2409:8c28:2481:6:0:1:0:96, 12345, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
-HK ZJCT = ss, 221.131.165.57, 30024, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
-HK SZCM = ss, 36.150.215.184, 30024, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
-HK SCCM = ss, 117.176.203.229, 30024, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
-SG ZJCM IPV6 = ss, 2409:8c28:2481:6:0:1:0:96, 34444, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false
-SG ZJCT = ss, go.yyds.rest, 50745, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false
-SG SZCM = ss, dd.yyds.rest, 45632, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
-SJC GC ZJCT = ss, go.yyds.rest, 31241, encrypt-method=aes-128-gcm, password=IAKIOI, tfo=false, udp-relay=true
-Test = ss, 120.199.91.25, 64220, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+# US
+SJC/SPK SH = ss, sh.mkxk.dj, 21409, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+SJC ZJCT = ss, nbdx.yyds.rest, 30394, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+SPK ZJCT = ss, nbdx.yyds.rest, 13872, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+
+# JP
+JP ZJCT = ss, nbdx.yyds.rest, 56313, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+JP ZJCM = ss, nbyd.yyds.rest, 17330, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+
+# HK
+HK/SG IEPL = ss, ee.ednovas.cloud, 19916, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+HK ZJCT = ss, nbdx.yyds.rest, 28659, encrypt-method=aes-128-gcm, password=Euler, tfo=false
+HK ZJCM = ss, nbyd.yyds.rest, 56699, encrypt-method=aes-128-gcm, password=Euler, tfo=false
+
+# SG
+SG ZJCT = ss, nbdx.yyds.rest, 59411, encrypt-method=aes-128-gcm, password=Euler, tfo=false
+SG ZJCM = ss, nbyd.yyds.rest, 29548, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
+
+# TW
+TW HKIPLC = ss, zxdx.yyds.rest, 49975, encrypt-method=aes-256-gcm, password=h0M9wjzWfn, tfo=false, udp-relay=true
+
+# Test Node
+Test = ss, zxdx.yyds.rest, 49975, encrypt-method=aes-256-gcm, password=h0M9wjzWfn, tfo=false, udp-relay=true
 
 [Proxy Group]
-Manual Selection = select, JP JSCM , JP ZJCT, JP ZJCM IPV6, HK IEPL, HK ZJCM IPV6, HK ZJCT, HK SZCM, SG ZJCM IPV6, SG ZJCT, SG SZCM, SJC GC ZJCT, Test
+Manual Selection = select, JP ZJCT, JP ZJCM, HK/SG IEPL, HK ZJCT, HK ZJCM, SG ZJCT, SG ZJCM, TW HKIPLC, SJC/SPK SH, SJC ZJCT, SPK ZJCT, Test
 
-HK = select, HK IEPL, HK ZJCM IPV6, HK ZJCT, HK SZCM, Test
-SG = select, SG ZJCM IPV6, SG ZJCT, SG SZCM, Test
-JP = select, JP JSCM, JP ZJCM IPV6, JP ZJCT, Test
-US = select, SJC GC ZJCT, Test
+HK = select, HK/SG IEPL, HK ZJCT, HK ZJCM, Test
+SG = select, SG ZJCT, SG ZJCM, Test
+JP = select, JP ZJCT, JP ZJCM, Test
+TW = select, TW HKIPLC, Test
+US = select, SJC/SPK SH, SJC ZJCT, SPK ZJCT, Test
 EU = select, Test
 Other = select, Test
 
@@ -59,22 +53,22 @@ Apple = select, HK, SG, JP, US, EU, Manual Selection, DIRECT
 Apps = select, HK, SG, JP, US, EU, Manual Selection, DIRECT
 Ads = select, REJECT, DIRECT
 
+
 [Rule]
-DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/direct.txt, DIRECT
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list, DIRECT,update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list, Ads,update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list, Apps,update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list, Microsoft,update-interval=86400
-DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/apple.txt, Apple,update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list, TG,update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Surge/OpenAI/OpenAI.list,ChatGPT
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list, International Media,update-interval=86400
-RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list, Manual Selection,update-interval=86400
-DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/gfw.txt, Manual Selection,update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list, DIRECT
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list, DIRECT, update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list, Ads, update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list, Apps, update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list, Microsoft, update-interval=86400
+DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/apple.txt, Apple, update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list, TG, update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Surge/OpenAI/OpenAI.list, ChatGPT
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list, International Media, update-interval=86400
+RULE-SET,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyLite.list, Manual Selection, update-interval=86400
+DOMAIN-SET,https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/gfw.txt, Manual Selection, update-interval=86400
 DOMAIN,license.sublimehq.com,REJECT
-RULE-SET,https://ruleset.skk.moe/List/ip/domestic.conf,DIRECT
-IP-CIDR,185.213.24.59/32,DIRECT
-GEOIP,CN,DIRECT
-PROCESS-NAME,/Library/Java/JavaVirtualMachines/microsoft-21.jdk/Contents/Home/bin/java,Test
-FINAL,Manual Selection,dns-failed
+RULE-SET,https://ruleset.skk.moe/List/ip/domestic.conf, DIRECT
+GEOIP,CN, DIRECT
+PROCESS-NAME,/Library/Java/JavaVirtualMachines/microsoft-21.jdk/Contents/Home/bin/java, Apps
+FINAL, Manual Selection, dns-failed
 
