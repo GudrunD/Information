@@ -5,37 +5,35 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 🇯🇵 JP JSCM, server: 36.150.215.184, port: 20024, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
-  - {name: 🇯🇵 JP ZJCT, server: 221.131.165.57, port: 20024, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
-  - {name: 🇯🇵 JP ZJCM IPV6, server: 2409:8c28:2481:6:0:1:0:96, port: 10111, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
-  - {name: 🇭🇰 HK IEPL, server: ee.ednovas.cloud, port: 19916, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
-  - {name: 🇭🇰 HK ZJCM IPV6, server: sh.mkxk.dj, port: 21409, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
-  - {name: 🇭🇰 HK ZJCT, server: sh.mkxk.dj, port: 21409, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
-  - {name: 🇭🇰 HK SZCM, server: sh.mkxk.dj, port: 21409, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
-  - {name: 🇭🇰 HK SCCM, server: sh.mkxk.dj, port: 21409, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
-  - {name: 🇸🇬 SG ZJCM IPV6, server: 2409:8c28:2481:6:0:1:0:96, port: 34444, type: ss, cipher: aes-128-gcm, password: IAKIOI}
-  - {name: 🇸🇬 SG ZJCT, server: 58.254.184.149, port: 44391, type: ss, cipher: aes-128-gcm, password: Euler}
-  - {name: 🇸🇬 SG SZCM, server: 58.63.250.228, port: 44391, type: ss, cipher: aes-128-gcm, password: Euler}
-  - {name: SJC GC ZJCT, server: zxdx.yyds.rest, port: 44391, type: ss, cipher: aes-128-gcm, password: Euler}
-  - {name: Test, server: sh.mkxk.dj, port: 21409, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: SJC/SPK SH, server: sh.mkxk.dj, port: 21409, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: SJC ZJCT, server: nbdx.yyds.rest, port: 30394, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: SPK ZJCT, server: nbdx.yyds.rest, port: 13872, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: 🇯🇵 JP ZJCT, server: nbdx.yyds.rest, port: 56313, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: 🇯🇵 JP ZJCM, server: nbyd.yyds.rest, port: 17330, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: 🇭🇰 HK/SG IEPL, server: ee.ednovas.cloud, port: 19916, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: 🇭🇰 HK ZJCT, server: nbdx.yyds.rest, port: 28659, type: ss, cipher: aes-128-gcm, password: Euler}
+  - {name: 🇭🇰 HK ZJCM, server: nbyd.yyds.rest, port: 56699, type: ss, cipher: aes-128-gcm, password: Euler}
+  - {name: 🇸🇬 SG ZJCT, server: nbdx.yyds.rest, port: 59411, type: ss, cipher: aes-128-gcm, password: Euler}
+  - {name: 🇸🇬 SG ZJCM, server: nbyd.yyds.rest, port: 29548, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: 🇨🇳 TW HKIPLC, server: zxdx.yyds.rest, port: 49975, type: ss, cipher: aes-256-gcm, password: h0M9wjzWfn, udp: true}
+  - {name: Test, server: zxdx.yyds.rest, port: 49975, type: ss, cipher: aes-256-gcm, password: h0M9wjzWfn, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 🇯🇵 JP JSCM
+      - SJC/SPK SH
+      - SJC ZJCT
+      - SPK ZJCT
       - 🇯🇵 JP ZJCT
-      - 🇯🇵 JP ZJCM IPV6
-      - 🇭🇰 HK IEPL
-      - 🇭🇰 HK ZJCM IPV6
+      - 🇯🇵 JP ZJCM
+      - 🇭🇰 HK/SG IEPL
       - 🇭🇰 HK ZJCT
-      - 🇭🇰 HK SZCM
-      - 🇭🇰 HK SCCM
-      - 🇸🇬 SG ZJCM IPV6
+      - 🇭🇰 HK ZJCM
       - 🇸🇬 SG ZJCT
-      - 🇸🇬 SG SZCM
-      - SJC GC ZJCT
+      - 🇸🇬 SG ZJCM
+      - 🇨🇳 TW HKIPLC
       - Test
   - name: ♻️ 自动选择
     type: url-test
@@ -43,18 +41,17 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - 🇯🇵 JP JSCM
+      - SJC/SPK SH
+      - SJC ZJCT
+      - SPK ZJCT
       - 🇯🇵 JP ZJCT
-      - 🇯🇵 JP ZJCM IPV6
-      - 🇭🇰 HK IEPL
-      - 🇭🇰 HK ZJCM IPV6
+      - 🇯🇵 JP ZJCM
+      - 🇭🇰 HK/SG IEPL
       - 🇭🇰 HK ZJCT
-      - 🇭🇰 HK SZCM
-      - 🇭🇰 HK SCCM
-      - 🇸🇬 SG ZJCM IPV6
+      - 🇭🇰 HK ZJCM
       - 🇸🇬 SG ZJCT
-      - 🇸🇬 SG SZCM
-      - SJC GC ZJCT
+      - 🇸🇬 SG ZJCM
+      - 🇨🇳 TW HKIPLC
       - Test
   - name: 🌍 国外媒体
     type: select
@@ -62,72 +59,68 @@ proxy-groups:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 🇯🇵 JP JSCM
+      - SJC/SPK SH
+      - SJC ZJCT
+      - SPK ZJCT
       - 🇯🇵 JP ZJCT
-      - 🇯🇵 JP ZJCM IPV6
-      - 🇭🇰 HK IEPL
-      - 🇭🇰 HK ZJCM IPV6
+      - 🇯🇵 JP ZJCM
+      - 🇭🇰 HK/SG IEPL
       - 🇭🇰 HK ZJCT
-      - 🇭🇰 HK SZCM
-      - 🇭🇰 HK SCCM
-      - 🇸🇬 SG ZJCM IPV6
+      - 🇭🇰 HK ZJCM
       - 🇸🇬 SG ZJCT
-      - 🇸🇬 SG SZCM
-      - SJC GC ZJCT
+      - 🇸🇬 SG ZJCM
+      - 🇨🇳 TW HKIPLC
       - Test
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇯🇵 JP JSCM
+      - SJC/SPK SH
+      - SJC ZJCT
+      - SPK ZJCT
       - 🇯🇵 JP ZJCT
-      - 🇯🇵 JP ZJCM IPV6
-      - 🇭🇰 HK IEPL
-      - 🇭🇰 HK ZJCM IPV6
+      - 🇯🇵 JP ZJCM
+      - 🇭🇰 HK/SG IEPL
       - 🇭🇰 HK ZJCT
-      - 🇭🇰 HK SZCM
-      - 🇭🇰 HK SCCM
-      - 🇸🇬 SG ZJCM IPV6
+      - 🇭🇰 HK ZJCM
       - 🇸🇬 SG ZJCT
-      - 🇸🇬 SG SZCM
-      - SJC GC ZJCT
+      - 🇸🇬 SG ZJCM
+      - 🇨🇳 TW HKIPLC
       - Test
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 🇯🇵 JP JSCM
+      - SJC/SPK SH
+      - SJC ZJCT
+      - SPK ZJCT
       - 🇯🇵 JP ZJCT
-      - 🇯🇵 JP ZJCM IPV6
-      - 🇭🇰 HK IEPL
-      - 🇭🇰 HK ZJCM IPV6
+      - 🇯🇵 JP ZJCM
+      - 🇭🇰 HK/SG IEPL
       - 🇭🇰 HK ZJCT
-      - 🇭🇰 HK SZCM
-      - 🇭🇰 HK SCCM
-      - 🇸🇬 SG ZJCM IPV6
+      - 🇭🇰 HK ZJCM
       - 🇸🇬 SG ZJCT
-      - 🇸🇬 SG SZCM
-      - SJC GC ZJCT
+      - 🇸🇬 SG ZJCM
+      - 🇨🇳 TW HKIPLC
       - Test
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 🇯🇵 JP JSCM
+      - SJC/SPK SH
+      - SJC ZJCT
+      - SPK ZJCT
       - 🇯🇵 JP ZJCT
-      - 🇯🇵 JP ZJCM IPV6
-      - 🇭🇰 HK IEPL
-      - 🇭🇰 HK ZJCM IPV6
+      - 🇯🇵 JP ZJCM
+      - 🇭🇰 HK/SG IEPL
       - 🇭🇰 HK ZJCT
-      - 🇭🇰 HK SZCM
-      - 🇭🇰 HK SCCM
-      - 🇸🇬 SG ZJCM IPV6
+      - 🇭🇰 HK ZJCM
       - 🇸🇬 SG ZJCT
-      - 🇸🇬 SG SZCM
-      - SJC GC ZJCT
+      - 🇸🇬 SG ZJCM
+      - 🇨🇳 TW HKIPLC
       - Test
   - name: 📢 谷歌FCM
     type: select
@@ -135,18 +128,17 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇯🇵 JP JSCM
+      - SJC/SPK SH
+      - SJC ZJCT
+      - SPK ZJCT
       - 🇯🇵 JP ZJCT
-      - 🇯🇵 JP ZJCM IPV6
-      - 🇭🇰 HK IEPL
-      - 🇭🇰 HK ZJCM IPV6
+      - 🇯🇵 JP ZJCM
+      - 🇭🇰 HK/SG IEPL
       - 🇭🇰 HK ZJCT
-      - 🇭🇰 HK SZCM
-      - 🇭🇰 HK SCCM
-      - 🇸🇬 SG ZJCM IPV6
+      - 🇭🇰 HK ZJCM
       - 🇸🇬 SG ZJCT
-      - 🇸🇬 SG SZCM
-      - SJC GC ZJCT
+      - 🇸🇬 SG ZJCM
+      - 🇨🇳 TW HKIPLC
       - Test
   - name: 🎯 全球直连
     type: select
@@ -170,18 +162,17 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 🇯🇵 JP JSCM
+      - SJC/SPK SH
+      - SJC ZJCT
+      - SPK ZJCT
       - 🇯🇵 JP ZJCT
-      - 🇯🇵 JP ZJCM IPV6
-      - 🇭🇰 HK IEPL
-      - 🇭🇰 HK ZJCM IPV6
+      - 🇯🇵 JP ZJCM
+      - 🇭🇰 HK/SG IEPL
       - 🇭🇰 HK ZJCT
-      - 🇭🇰 HK SZCM
-      - 🇭🇰 HK SCCM
-      - 🇸🇬 SG ZJCM IPV6
+      - 🇭🇰 HK ZJCM
       - 🇸🇬 SG ZJCT
-      - 🇸🇬 SG SZCM
-      - SJC GC ZJCT
+      - 🇸🇬 SG ZJCM
+      - 🇨🇳 TW HKIPLC
       - Test
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
@@ -3636,6 +3627,6 @@ rules:
   - IP-CIDR,101.198.128.0/18,🎯 全球直连,no-resolve
   - IP-CIDR,101.198.192.0/19,🎯 全球直连,no-resolve
   - IP-CIDR,101.199.196.0/22,🎯 全球直连,no-resolve
-  - GEOIP,CN,🎯 全球直连
   - IP-CIDR,172.3.0.0/12,🎯 全球直连,no-resolve
+  - GEOIP,CN,🎯 全球直连
   - MATCH,🐟 漏网之鱼
