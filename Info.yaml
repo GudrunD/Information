@@ -5,9 +5,9 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: SJC/SPK SH, server: sh.mkxk.dj, port: 21409, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
-  - {name: SJC ZJCT, server: nbdx.yyds.rest, port: 30394, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
-  - {name: SPK ZJCT, server: nbdx.yyds.rest, port: 13872, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: 🇺🇸 US SJC/SPK SH, server: sh.mkxk.dj, port: 21409, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: 🇺🇸 US SJC ZJCT, server: nbdx.yyds.rest, port: 30394, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: 🇺🇸 US SPK ZJCT, server: nbdx.yyds.rest, port: 13872, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
   - {name: 🇯🇵 JP ZJCT, server: nbdx.yyds.rest, port: 56313, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
   - {name: 🇯🇵 JP ZJCM, server: nbyd.yyds.rest, port: 17330, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
   - {name: 🇭🇰 HK/SG IEPL, server: ee.ednovas.cloud, port: 19916, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
@@ -17,15 +17,21 @@ proxies:
   - {name: 🇸🇬 SG ZJCM, server: nbyd.yyds.rest, port: 29548, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
   - {name: 🇨🇳 TW HKIPLC, server: zxdx.yyds.rest, port: 49975, type: ss, cipher: aes-256-gcm, password: h0M9wjzWfn, udp: true}
   - {name: Test, server: zxdx.yyds.rest, port: 49975, type: ss, cipher: aes-256-gcm, password: h0M9wjzWfn, udp: true}
+  - {name: 🇯🇵 備用 JP 上海, server: cqq210.198139.xyz, port: 10030, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: 🇯🇵 備用 JP 湖北, server: qqb12.198139.xyz, port: 10040, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: 🇭🇰 備用 HK 上海, server: cqq210.198139.xyz, port: 50769, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: 🇭🇰 備用 HK 廣西, server: qqa813.198139.xyz, port: 44314, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: 🇭🇰 備用 HK 廣州, server: zxdx.yyds.rest, port: 34038, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
+  - {name: 🇺🇸 備用 US 上海, server: cqq210.198139.xyz, port: 11919, type: ss, cipher: aes-128-gcm, password: Euler, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - SJC/SPK SH
-      - SJC ZJCT
-      - SPK ZJCT
+      - 🇺🇸 US SJC/SPK SH
+      - 🇺🇸 US SJC ZJCT
+      - 🇺🇸 US SPK ZJCT
       - 🇯🇵 JP ZJCT
       - 🇯🇵 JP ZJCM
       - 🇭🇰 HK/SG IEPL
@@ -35,15 +41,21 @@ proxy-groups:
       - 🇸🇬 SG ZJCM
       - 🇨🇳 TW HKIPLC
       - Test
+      - 🇯🇵 備用 JP 上海
+      - 🇯🇵 備用 JP 湖北
+      - 🇭🇰 備用 HK 上海
+      - 🇭🇰 備用 HK 廣西
+      - 🇭🇰 備用 HK 廣州
+      - 🇺🇸 備用 US 上海
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - SJC/SPK SH
-      - SJC ZJCT
-      - SPK ZJCT
+      - 🇺🇸 US SJC/SPK SH
+      - 🇺🇸 US SJC ZJCT
+      - 🇺🇸 US SPK ZJCT
       - 🇯🇵 JP ZJCT
       - 🇯🇵 JP ZJCM
       - 🇭🇰 HK/SG IEPL
@@ -53,15 +65,21 @@ proxy-groups:
       - 🇸🇬 SG ZJCM
       - 🇨🇳 TW HKIPLC
       - Test
+      - 🇯🇵 備用 JP 上海
+      - 🇯🇵 備用 JP 湖北
+      - 🇭🇰 備用 HK 上海
+      - 🇭🇰 備用 HK 廣西
+      - 🇭🇰 備用 HK 廣州
+      - 🇺🇸 備用 US 上海
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - SJC/SPK SH
-      - SJC ZJCT
-      - SPK ZJCT
+      - 🇺🇸 US SJC/SPK SH
+      - 🇺🇸 US SJC ZJCT
+      - 🇺🇸 US SPK ZJCT
       - 🇯🇵 JP ZJCT
       - 🇯🇵 JP ZJCM
       - 🇭🇰 HK/SG IEPL
@@ -71,14 +89,20 @@ proxy-groups:
       - 🇸🇬 SG ZJCM
       - 🇨🇳 TW HKIPLC
       - Test
+      - 🇯🇵 備用 JP 上海
+      - 🇯🇵 備用 JP 湖北
+      - 🇭🇰 備用 HK 上海
+      - 🇭🇰 備用 HK 廣西
+      - 🇭🇰 備用 HK 廣州
+      - 🇺🇸 備用 US 上海
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - SJC/SPK SH
-      - SJC ZJCT
-      - SPK ZJCT
+      - 🇺🇸 US SJC/SPK SH
+      - 🇺🇸 US SJC ZJCT
+      - 🇺🇸 US SPK ZJCT
       - 🇯🇵 JP ZJCT
       - 🇯🇵 JP ZJCM
       - 🇭🇰 HK/SG IEPL
@@ -88,14 +112,20 @@ proxy-groups:
       - 🇸🇬 SG ZJCM
       - 🇨🇳 TW HKIPLC
       - Test
+      - 🇯🇵 備用 JP 上海
+      - 🇯🇵 備用 JP 湖北
+      - 🇭🇰 備用 HK 上海
+      - 🇭🇰 備用 HK 廣西
+      - 🇭🇰 備用 HK 廣州
+      - 🇺🇸 備用 US 上海
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - SJC/SPK SH
-      - SJC ZJCT
-      - SPK ZJCT
+      - 🇺🇸 US SJC/SPK SH
+      - 🇺🇸 US SJC ZJCT
+      - 🇺🇸 US SPK ZJCT
       - 🇯🇵 JP ZJCT
       - 🇯🇵 JP ZJCM
       - 🇭🇰 HK/SG IEPL
@@ -105,14 +135,20 @@ proxy-groups:
       - 🇸🇬 SG ZJCM
       - 🇨🇳 TW HKIPLC
       - Test
+      - 🇯🇵 備用 JP 上海
+      - 🇯🇵 備用 JP 湖北
+      - 🇭🇰 備用 HK 上海
+      - 🇭🇰 備用 HK 廣西
+      - 🇭🇰 備用 HK 廣州
+      - 🇺🇸 備用 US 上海
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - SJC/SPK SH
-      - SJC ZJCT
-      - SPK ZJCT
+      - 🇺🇸 US SJC/SPK SH
+      - 🇺🇸 US SJC ZJCT
+      - 🇺🇸 US SPK ZJCT
       - 🇯🇵 JP ZJCT
       - 🇯🇵 JP ZJCM
       - 🇭🇰 HK/SG IEPL
@@ -122,15 +158,21 @@ proxy-groups:
       - 🇸🇬 SG ZJCM
       - 🇨🇳 TW HKIPLC
       - Test
+      - 🇯🇵 備用 JP 上海
+      - 🇯🇵 備用 JP 湖北
+      - 🇭🇰 備用 HK 上海
+      - 🇭🇰 備用 HK 廣西
+      - 🇭🇰 備用 HK 廣州
+      - 🇺🇸 備用 US 上海
   - name: 📢 谷歌FCM
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - SJC/SPK SH
-      - SJC ZJCT
-      - SPK ZJCT
+      - 🇺🇸 US SJC/SPK SH
+      - 🇺🇸 US SJC ZJCT
+      - 🇺🇸 US SPK ZJCT
       - 🇯🇵 JP ZJCT
       - 🇯🇵 JP ZJCM
       - 🇭🇰 HK/SG IEPL
@@ -140,6 +182,12 @@ proxy-groups:
       - 🇸🇬 SG ZJCM
       - 🇨🇳 TW HKIPLC
       - Test
+      - 🇯🇵 備用 JP 上海
+      - 🇯🇵 備用 JP 湖北
+      - 🇭🇰 備用 HK 上海
+      - 🇭🇰 備用 HK 廣西
+      - 🇭🇰 備用 HK 廣州
+      - 🇺🇸 備用 US 上海
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -162,9 +210,9 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - SJC/SPK SH
-      - SJC ZJCT
-      - SPK ZJCT
+      - 🇺🇸 US SJC/SPK SH
+      - 🇺🇸 US SJC ZJCT
+      - 🇺🇸 US SPK ZJCT
       - 🇯🇵 JP ZJCT
       - 🇯🇵 JP ZJCM
       - 🇭🇰 HK/SG IEPL
@@ -174,6 +222,12 @@ proxy-groups:
       - 🇸🇬 SG ZJCM
       - 🇨🇳 TW HKIPLC
       - Test
+      - 🇯🇵 備用 JP 上海
+      - 🇯🇵 備用 JP 湖北
+      - 🇭🇰 備用 HK 上海
+      - 🇭🇰 備用 HK 廣西
+      - 🇭🇰 備用 HK 廣州
+      - 🇺🇸 備用 US 上海
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
