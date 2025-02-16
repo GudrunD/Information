@@ -40,13 +40,13 @@ Test = ss, zxdx.yyds.rest, 49975, encrypt-method=aes-256-gcm, password=h0M9wjzWf
 備用 US 上海 = ss, cqq210.198139.xyz, 11919, encrypt-method=aes-128-gcm, password=Euler, tfo=false, udp-relay=true
 
 [Proxy Group]
-Manual Selection = select, JP ZJCT, JP ZJCM, HK/SG IEPL, HK ZJCT, HK ZJCM, SG ZJCT, SG ZJCM, TW HKIPLC, SJC/SPK SH, SJC ZJCT, SPK ZJCT, Test, 備用 JP 上海, 備用 JP 湖北, 備用 HK 上海, 備用 HK 廣西, 備用 HK 廣州, 備用 US 上海
+Manual Selection = select, JP ZJCT, JP ZJCM, HK/SG IEPL, HK ZJCT, HK ZJCM, SG ZJCT, SG ZJCM, TW HKIPLC, US SJC/SPK SH, US SJC ZJCT, US SPK ZJCT, Test, 備用 JP 上海, 備用 JP 湖北, 備用 HK 上海, 備用 HK 廣西, 備用 HK 廣州, 備用 US 上海
 
 HK = select, HK/SG IEPL, HK ZJCT, HK ZJCM, Test
 SG = select, SG ZJCT, SG ZJCM, Test
 JP = select, JP ZJCT, JP ZJCM, Test
 TW = select, TW HKIPLC, Test
-US = select, SJC/SPK SH, SJC ZJCT, SPK ZJCT, Test
+US = select, US SJC/SPK SH, US SJC ZJCT, US SPK ZJCT, Test
 EU = select, Test
 Other = select, Test
 
